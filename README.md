@@ -243,9 +243,9 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/math-base-blas-dcopy
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
 
-[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/math-base-blas-scopy
+[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy
 
 </section>
 
