@@ -180,6 +180,23 @@ console.log( y );
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/blas/base/dcopy`][@stdlib/blas/base/dcopy]: copy values from x into y.
+-   [`@stdlib/blas/base/scopy`][@stdlib/blas/base/scopy]: copy values from x into y.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -243,9 +260,13 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
+<!-- <related-links> -->
+
 [@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
 
 [@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy
+
+<!-- </related-links> -->
 
 </section>
 
