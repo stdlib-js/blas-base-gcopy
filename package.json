@@ -1,0 +1,38 @@
+{
+  "name": "@stdlib/blas-base-gcopy",
+  "version": "0.0.0",
+  "description": "Copy values from x into y.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/blas-base-gcopy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "blas",
+    "level 1",
+    "linear",
+    "algebra",
+    "subroutines",
+    "dcopy",
+    "scopy",
+    "copy",
+    "cp",
+    "vector",
+    "array",
+    "ndarray"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
