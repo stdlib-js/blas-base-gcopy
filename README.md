@@ -31,13 +31,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@deno/mod.js';
+import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@v0.0.8-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@v0.0.8-deno/mod.js';
 ```
 
 #### gcopy( N, x, strideX, y, strideY )
@@ -142,7 +142,7 @@ gcopy.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 ```javascript
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@deno/mod.js';
+import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@v0.0.8-deno/mod.js';
 
 var x = filledarrayBy( 10, 'float64', discreteUniform( 0, 500 ) );
 console.log( x );
