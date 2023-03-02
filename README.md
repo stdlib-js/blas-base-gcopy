@@ -64,13 +64,13 @@ gcopy( x.length, x, 1, y, 1 );
 
 The function has the following parameters:
 
--   **N**: number of values to copy.
+-   **N**: number of indexed elements.
 -   **x**: input array.
 -   **strideX**: index increment for `x`.
 -   **y**: destination array.
 -   **strideY**: index increment for `y`.
 
-The `N` and `stride` parameters determine how values from `x` are copied into `y`. For example, to copy in reverse order every other value in `x` into the first `N` elements of `y`,
+The `N` and stride parameters determine how values from `x` are copied into `y`. For example, to copy in reverse order every other value in `x` into the first `N` elements of `y`,
 
 ```javascript
 var x = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -117,7 +117,7 @@ The function has the following additional parameters:
 -   **offsetX**: starting index for `x`.
 -   **offsetY**: starting index for `y`.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to copy every other value in `x` starting from the second value into the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to copy every other value in `x` starting from the second value into the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
 
 ```javascript
 var x = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -136,7 +136,7 @@ gcopy.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 ## Notes
 
 -   If `N <= 0`, both functions return `y` unchanged.
--   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array/complex64`][@stdlib/array/complex64]).
+-   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-complex64`][@stdlib/array/complex64]).
 -   `gcopy()` corresponds to the [BLAS][blas] level 1 function [`dcopy`][dcopy] with the exception that this implementation works with any array type, not just Float64Arrays. Depending on the environment, the typed versions ([`dcopy`][@stdlib/blas/base/dcopy], [`scopy`][@stdlib/blas/base/scopy], etc.) are likely to be significantly more performant.
 
 </section>
@@ -177,8 +177,8 @@ console.log( y );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/blas/base/dcopy`][@stdlib/blas/base/dcopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
--   <span class="package-name">[`@stdlib/blas/base/scopy`][@stdlib/blas/base/scopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
+-   <span class="package-name">[`@stdlib/blas-base/dcopy`][@stdlib/blas/base/dcopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
+-   <span class="package-name">[`@stdlib/blas-base/scopy`][@stdlib/blas/base/scopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
 
 </section>
 
@@ -237,7 +237,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
