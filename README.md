@@ -35,25 +35,30 @@ limitations under the License.
 
 > Copy values from `x` into `y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-gcopy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-gcopy/tags). For example,
-
-```javascript
-import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@v0.1.0-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@esm/index.mjs';
+var gcopy = require( '@stdlib/blas-base-gcopy' );
 ```
 
 #### gcopy( N, x, strideX, y, strideY )
@@ -91,7 +96,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -155,15 +160,10 @@ gcopy.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import gcopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var gcopy = require( '@stdlib/blas-base-gcopy' );
 
 var x = filledarrayBy( 10, 'float64', discreteUniform( 0, 500 ) );
 console.log( x );
@@ -174,10 +174,6 @@ console.log( y );
 // Copy elements from `x` into `y` starting from the end of `y`:
 gcopy( x.length, x, 1, y, -1 );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -208,7 +204,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -238,8 +234,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-gcopy.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-gcopy
 
-[test-image]: https://github.com/stdlib-js/blas-base-gcopy/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/blas-base-gcopy/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/blas-base-gcopy/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-gcopy/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-gcopy/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-gcopy?branch=main
@@ -274,11 +270,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/esm
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy/tree/esm
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
 
-[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy/tree/esm
+[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy
 
 </section>
 
