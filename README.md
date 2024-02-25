@@ -35,32 +35,38 @@ limitations under the License.
 
 > Copy values from `x` into `y`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-gcopy
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var gcopy = require( '@stdlib/blas-base-gcopy' );
+gcopy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var gcopy = require( 'path/to/vendor/umd/blas-base-gcopy/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.gcopy;
+})();
+</script>
 ```
 
 #### gcopy( N, x, strideX, y, strideY )
@@ -162,9 +168,14 @@ gcopy.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var gcopy = require( '@stdlib/blas-base-gcopy' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gcopy@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float64'
@@ -178,6 +189,11 @@ console.log( y );
 // Copy elements from `x` into `y` starting from the end of `y`:
 gcopy( x.length, x, 1, y, -1 );
 console.log( y );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -277,11 +293,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
 
-[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy/tree/umd
 
-[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy
+[@stdlib/blas/base/scopy]: https://github.com/stdlib-js/blas-base-scopy/tree/umd
 
 <!-- <related-links> -->
 
