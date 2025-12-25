@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-07)
+## Unreleased (2025-12-25)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`600afbd`](https://github.com/stdlib-js/stdlib/commit/600afbd33e98dfe849a1232e00080a6d9adf7fda) - return correct parameter [(#9368)](https://github.com/stdlib-js/stdlib/pull/9368)
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`600afbd`](https://github.com/stdlib-js/stdlib/commit/600afbd33e98dfe849a1232e00080a6d9adf7fda) - **fix:** return correct parameter [(#9368)](https://github.com/stdlib-js/stdlib/pull/9368) _(by Gururaj Gurram)_
 -   [`75d4f83`](https://github.com/stdlib-js/stdlib/commit/75d4f83cb85610d23a04dc21a03f8075f6d3665f) - **refactor:** update require and include paths _(by Athan Reines)_
 
 </details>
@@ -24,9 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Gururaj Gurram
 
 </section>
 
